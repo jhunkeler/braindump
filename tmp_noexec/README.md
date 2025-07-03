@@ -37,8 +37,11 @@ Set the `TMPDIR` environment variable to point elsewhere.
 From https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html
 
 > 8.3 Other Environment Variables
+>
 > ...
+>
 > TMPDIR
+>
 >    This variable shall represent a pathname of a directory made available for programs that need a place to create temporary files.
 
 See [tmp-noexec.sh](tmp-noexec.sh). When `/tmp` is mounted with the `noexec` flag this script creates a directory in `/dev/shm` (a memory file system), secures it for the current user with `0700` permissions, and configures `TMPDIR`.
